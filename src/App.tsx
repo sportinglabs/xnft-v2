@@ -1,20 +1,13 @@
 import buffer from "buffer";
 globalThis.Buffer = buffer.Buffer;
 
-import {
-  ConnectionProvider,
-  WalletProvider,
-} from "@solana/wallet-adapter-react";
-import { WalletModalProvider } from "@solana/wallet-adapter-react-ui";
 import { RouterProvider, createBrowserRouter } from "react-router-dom";
 import { Layout } from "./Layout";
 import ErrorPage from "./ErrorPage";
 import "./App.css";
-import "@solana/wallet-adapter-react-ui/styles.css";
-// TODO: refactor screens to not use react-native
-import { HomeScreen } from "./screens/HomeScreen";
-import { StakingScreen } from "./screens/StakingScreen";
-import { LeaderboardScreen } from "./screens/LeaderboardScreen";
+import { Home } from "./screens/Home";
+import { Staking } from "./screens/Staking";
+import { Leaderboard } from "./screens/Leaderboard";
 
 const router = createBrowserRouter([
   {
@@ -22,26 +15,15 @@ const router = createBrowserRouter([
     element: <Layout />,
     errorElement: <ErrorPage />,
     children: [
-      { index: true, element: <div /> },
-      { path: "leaderboard", element: <div /> },
-      {
-        path: "staking",
-        element: <div />,
-      },
+      { index: true, element: <Home /> },
+      { path: "staking", element: <Staking /> },
+      { path: "leaderboard", element: <Leaderboard /> },
     ],
   },
 ]);
 
 function App() {
-  return (
-    <ConnectionProvider endpoint={import.meta.env.VITE_RPC_URL_MAINNET}>
-      <WalletProvider wallets={[]} autoConnect>
-        <WalletModalProvider>
-            <RouterProvider router={router} />
-        </WalletModalProvider>
-      </WalletProvider>
-    </ConnectionProvider>
-  );
+  return <RouterProvider router={router} />;
 }
 
 export default App;

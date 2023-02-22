@@ -1,10 +1,10 @@
 import { NavLink } from "react-router-dom";
-import { FaHome, FaDollarSign } from "react-icons/fa";
+import { FaHome, FaMedal, FaStream } from "react-icons/fa";
 
 const tabs = [
   { name: "Home", path: "/", icon: FaHome },
-  { name: "Staking", path: "staking", icon: FaDollarSign },
-  { name: "Leaderboard", path: "leaderboard", icon: FaDollarSign },
+  { name: "Staking", path: "staking", icon: FaStream },
+  { name: "Leaderboard", path: "leaderboard", icon: FaMedal },
 ];
 
 export function Tabs() {
