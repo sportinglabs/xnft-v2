@@ -1,52 +1,62 @@
-#root {
-  max-width: 1280px;
-  /* margin: 0 auto; */
-  /* padding: 2rem; */
-  text-align: center;
-}
-
-.logo {
-  height: 6em;
-  padding: 1.5em;
-  will-change: filter;
-  transition: filter 300ms;
-}
-.logo:hover {
-  filter: drop-shadow(0 0 2em #646cffaa);
-}
-.logo.react:hover {
-  filter: drop-shadow(0 0 2em #61dafbaa);
-}
-
-@keyframes logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  a:nth-of-type(2) .logo {
-    animation: logo-spin infinite 20s linear;
-  }
-}
-
-.card {
-  padding: 2em;
-}
-
-.read-the-docs {
-  color: #888;
-}
-
 .home {
-  display: "flex";
-  align-items: "center";
-  justify-content: "center";
-  margin: "";
-  padding: "0";
-  background-color: "black";
-  min-height: "100vh";
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    margin: 0;
+    padding: 0;
+}
+
+.home-section-1,
+.home-section-2 {
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
+    margin: 0;
+    padding: 0;
+    height: 50vh;
+}
+
+.home-title img {
+    width: 15vw;
+}
+
+.home-tabs {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.home-tab {
+    position: relative;
+    margin-top: 5px;
+    margin-bottom: 5px;
+    width: 400px;
+    height: 10vh;
+    background-color: var(--white-faded);
+    border-radius: 10px;
+}
+
+.home-tab-text {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    text-align: left;
+}
+
+.home-tab-title {
+    font-family: "sonara-rounded";
+    font-size: 24px;
+    color: var(--signature);
+    margin: 0;
+    padding: 0;
+}
+
+.home-tab-description {
+    font-family: "jetbrains-regular";
+    font-size: 16px;
+    color: var(--white);
+    margin: 0;
+    padding: 0;
 }
