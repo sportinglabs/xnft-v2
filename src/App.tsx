@@ -2,12 +2,13 @@ import buffer from "buffer";
 globalThis.Buffer = buffer.Buffer;
 
 import { RouterProvider, createBrowserRouter } from "react-router-dom";
+//default routes
 import { Layout } from "./Layout";
-import ErrorPage from "./ErrorPage";
-import "./App.css";
-import { Home } from "./screens/Home";
-import { Staking } from "./screens/Staking";
-import { Leaderboard } from "./screens/Leaderboard";
+import ErrorPage from "./routes/ErrorPage";
+//routes
+import { Home } from "./routes/Home";
+import { Staking } from "./routes/Staking";
+import { Leaderboard } from "./routes/Leaderboard";
 
 const router = createBrowserRouter([
   {
